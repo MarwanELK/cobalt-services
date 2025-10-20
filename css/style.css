@@ -99,6 +99,15 @@
     margin-left: 8px;
 }
 
+/* Centrer le menu sous le lien parent */
+.navbar .dropdown-menu {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  top: 100% !important;
+  margin-top: 0.5rem;
+}
+
+
 .navbar-light .navbar-nav .nav-link {
     margin-right: 30px;
     padding: 25px 0;
