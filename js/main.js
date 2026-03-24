@@ -184,14 +184,17 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
 
     // Récupérer les valeurs du formulaire
     let params = {
-        from_name: document.getElementById("name").value,
+        from_firstname: document.getElementById("firstname").value,
+        from_lastname: document.getElementById("lastname").value,
         from_email: document.getElementById("email").value,
+        from_phone : document.getElementById("phone").value,
+        service : document.getElementById("service").value,
         subject: document.getElementById("subject").value,
         message: document.getElementById("message").value
     };
 
     // Envoyer l'e-mail via EmailJS
-    emailjs.send("service_vuownbs", "template_wrycega", params)
+    emailjs.send("service_gfcvyxm", "template_wrycega", params)
         .then(function (response) {
             alert("Message envoyé avec succès !");
             document.getElementById("contact-form").reset(); // Réinitialise le formulaire

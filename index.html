@@ -361,340 +361,331 @@
     <!-- Autres Services End -->
 
 
-    <!-- Booking Start -->
-    <div class="container-fluid px-0" style="margin: 6rem 0;">
-        <div class="video wow fadeInUp" data-wow-delay="0.1s">
-            <button type="button" class="btn-play" data-bs-toggle="modal"
-                data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
-                <span></span>
-            </button>
-
-            <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content rounded-0">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <!-- 16:9 aspect ratio -->
-                            <div class="ratio ratio-16x9">
-                                <iframe class="embed-responsive-item" src="" id="video" allowfullscreen
-                                    allowscriptaccess="always" allow="autoplay"></iframe>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <h1 class="text-white mb-4">Emergency Plumbing Service</h1>
-            <h3 class="text-white mb-0">24 Hours 7 Days a Week</h3>
-        </div>
-        <div class="container position-relative wow fadeInUp" data-wow-delay="0.1s" style="margin-top: -6rem;">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="bg-light text-center p-5">
-                        <h1 class="mb-4">Book For A Service</h1>
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Name"
-                                        style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <input type="email" class="form-control border-0" placeholder="Your Email"
-                                        style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <select class="form-select border-0" style="height: 55px;">
-                                        <option selected>Select A Service</option>
-                                        <option value="1">Service 1</option>
-                                        <option value="2">Service 2</option>
-                                        <option value="3">Service 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <div class="date" id="date1" data-target-input="nearest">
-                                        <input type="text" class="form-control border-0 datetimepicker-input"
-                                            placeholder="Service Date" data-target="#date1" data-toggle="datetimepicker"
-                                            style="height: 55px;">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <textarea class="form-control border-0" placeholder="Special Request"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Booking End -->
-
-    <!-- Contact Start -->
+    <!-- devis Start -->
     <script src="js/main.js" defer></script>
 
     <!-- Importation de EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-    <div id="devis" class="container-xxl py-5">
+    <div id="book" class="container-xxl py-5">
 
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="text-secondary text-uppercase">Contactez-nous</h6>
-                    <h1 class="mb-4">Obtenez votre devis gratuit dès maintenant !</h1>
-                    <p class="mb-4">Contactez-nous pour une estimation rapide et personnalisée de vos besoins ou pour
-                        toute autre information</a>.</p>
-                    <iframe class="position-relative w-100"
-                        src="https://www.google.com/maps/d/u/0/embed?mid=1r5CTSd1RR2xpJI304oiMcZy7zba-Lnc&ehbc=2E312F"
-                        frameborder="0" style="height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
-                        tabindex="0"></iframe>
+        <div class="container-fluid px-0" style="margin: 6rem 0;">
+            <div class="video-wrapper wow fadeInUp position-relative m-0 p-0" data-wow-delay="0.1s">
 
+                <style>
+                    /* Supprime marges/paddings par défaut et fait coller le bloc à l'image */
+                    .video-wrapper {
+                        position: relative;
+                        width: 100%;
+                        margin: 0;
+                        padding: 0;
+                        overflow: hidden;
+                    }
 
+                    /* Image responsive qui définit la hauteur */
+                    .video-wrapper img {
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                        /* supprime l'espace blanc sous l'image */
+                    }
+
+                    /* Texte centré sur l'image */
+                    .video-wrapper .overlay-text {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        text-align: center;
+                        color: white;
+                        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+                        padding: 0 15px;
+                        /* pour mobile */
+                    }
+
+                    /* Supprime margin par défaut sur titres */
+                    .video-wrapper .overlay-text h1,
+                    .video-wrapper .overlay-text h3 {
+                        margin: 0;
+                        padding: 0;
+                    }
+                </style>
+
+                <!-- Image qui définit la hauteur du bloc -->
+                <img src="img/cobalt.png" alt="Service plomberie" class="img-fluid w-100 d-block">
+
+                <!-- Texte centré sur l'image -->
+                <div class="overlay-text">
+                    <h1></h1>
+                    <h3></h3>
                 </div>
-                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="bg-light p-5 h-100 d-flex align-items-center">
-                        <form id="contact-form">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input required="text" class="form-control" id="name" placeholder="Your Name">
-                                        <label for="name">Votre nom et prenom</label>
+
+            </div>
+            <div id="devis" class="container-xxl py-5">
+                <div class="container position-relative wow fadeInUp" data-wow-delay="0.1s" style="margin-top: -6rem;">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="bg-light text-center p-5">
+                                <h1 class="mb-4">Obtenez votre devis gratuit dès maintenant !</h1>
+
+                                <form id="contact-form">
+                                    <div class="row g-3">
+                                        <div class="col-12 col-sm-6">
+                                            <input type="text" class="form-control border-0" id="firstname"
+                                                placeholder="Prenom" style="height: 55px;" required>
+                                        </div>
+
+                                        <div class="col-12 col-sm-6">
+                                            <input type="text" class="form-control border-0" id="lastname"
+                                                placeholder="Nom" style="height: 55px;" required>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <input type="text" class="form-control border-0" id="phone"
+                                                placeholder="Téléphone" style="height: 55px;">
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <input type="email" class="form-control border-0" id="email"
+                                                placeholder="Email" style="height: 55px;" required>
+                                        </div>
+
+
+                                        <div class="col-12 col-sm-6">
+                                            <select class="form-select border-0" style="height: 55px;" id="service">
+                                                <option selected>Sélectionner un service</option>
+                                                <option value="Nettoyage">Nettoyage</option>
+                                                <option value="Désinfection">Désinfection</option>
+                                                <option value="Nettoyage après chantier">Nettoyage après chantier
+                                                </option>
+                                                <option value="Nettoyage bungalow">Nettoyage bungalow</option>
+                                                <option value="Déménagement">Déménagement</option>
+                                                <option value="Débarras">Débarras</option>
+                                                <option value="Autres">Autres</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <input type="text" class="form-control border-0" id="subject"
+                                                placeholder="Objet" style="height: 55px;">
+                                        </div>
+                                        <div class="col-12">
+                                            <textarea class="form-control border-0" id="message" placeholder="Message"
+                                                required></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <button class="btn btn-primary w-100 py-3" type="submit">Envoyer le
+                                                message</button>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input required type="email" class="form-control" id="email"
-                                            placeholder="Your Email">
-                                        <label for="email">Votre email</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input required type="text" class="form-control" id="subject"
-                                            placeholder="Subject">
-                                        <label for="subject">Objet</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea required class="form-control" placeholder="Leave a message here"
-                                            id="message" style="height: 150px"></textarea>
-                                        <label for="message">Votre message</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Envoyer le message</button>
-                                </div>
+                                </form>
+
                             </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Contact End -->
-
-    <!-- About Start -->
-    <div id="Apropos" class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="text-secondary text-uppercase">À propos de nous</h6>
-                    <h1 class="mb-4">Entreprise de services et de nettoyage
-                    </h1>
-                    <p class="mb-4">Nous sommes une société familiale à taille humaine active depuis 2021.
-                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Services et nettoyage
-                        pour entreprises et particuliers</p>
-                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Des prestations de
-                        qualité à des prix abordables</p>
-                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Nos équipes sont
-                        disponible 7j/7</p>
-                    <div class="bg-primary d-flex align-items-center p-4 mt-5">
-                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
-                            style="width: 60px; height: 60px;">
-                            <i class="fa fa-phone-alt fa-2x text-primary"></i>
-                        </div>
-                        <div class="ms-3">
-                            <p class="fs-5 fw-medium mb-2 text-white">Nous contatcer</p>
-                            <h3 class="m-0 text-secondary">07 81 11 71 53</h3>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 pt-4" style="min-height: 500px;">
-                    <div class="position-relative h-100 wow fadeInUp" data-wow-delay="0.5s">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/about-1.jpg"
-                            style="object-fit: cover; padding: 0 0 50px 100px;" alt="">
-                        <img class="position-absolute start-0 bottom-0 img-fluid bg-white pt-2 pe-2 w-50 h-50"
-                            src="img/about-2.jpg" style="object-fit: cover;" alt="">
+            </div id="devis" class="container-xxl py-5">
+
+        </div>
+
+        <!-- devis End -->
+
+        <!-- About Start -->
+        <div id="Apropos" class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <h6 class="text-secondary text-uppercase">À propos de nous</h6>
+                        <h1 class="mb-4">Entreprise de services et de nettoyage
+                        </h1>
+                        <p class="mb-4">Nous sommes une société familiale à taille humaine active depuis 2021.
+                        <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Services et
+                            nettoyage
+                            pour entreprises et particuliers</p>
+                        <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Des prestations
+                            de
+                            qualité à des prix abordables</p>
+                        <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Nos équipes sont
+                            disponible 7j/7</p>
+                        <div class="bg-primary d-flex align-items-center p-4 mt-5">
+                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
+                                style="width: 60px; height: 60px;">
+                                <i class="fa fa-phone-alt fa-2x text-primary"></i>
+                            </div>
+                            <div class="ms-3">
+                                <p class="fs-5 fw-medium mb-2 text-white">Nous contatcer</p>
+                                <h3 class="m-0 text-secondary">07 81 11 71 53</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pt-4" style="min-height: 500px;">
+                        <div class="position-relative h-100 wow fadeInUp" data-wow-delay="0.5s">
+                            <img class="position-absolute img-fluid w-100 h-100" src="img/about-1.jpg"
+                                style="object-fit: cover; padding: 0 0 50px 100px;" alt="">
+                            <img class="position-absolute start-0 bottom-0 img-fluid bg-white pt-2 pe-2 w-50 h-50"
+                                src="img/about-2.jpg" style="object-fit: cover;" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- About End -->
+        <!-- About End -->
 
 
 
 
 
-    <!-- Testimonial Start -->
-    <div id="Temoignages" class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="text-center">
-                <h6 class="text-secondary text-uppercase">Temoignages</h6>
-                <h1 class="mb-5">Ce que nos clients disents de nous !</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonial-item text-center">
-                    <div class="testimonial-text bg-light text-center p-4 mb-4">
-                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et
-                            eos. Clita erat ipsum et lorem et sit.</p>
-                    </div>
-                    <img class="bg-light rounded-circle p-2 mx-auto mb-2" src="img/testimonial-1.jpg"
-                        style="width: 80px; height: 80px;">
-                    <div class="mb-2">
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                    </div>
-                    <h5 class="mb-1">Client Name</h5>
-                    <p class="m-0">Profession</p>
+        <!-- Testimonial Start -->
+        <div id="Temoignages" class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="text-center">
+                    <h6 class="text-secondary text-uppercase">Temoignages</h6>
+                    <h1 class="mb-5">Ce que nos clients disents de nous !</h1>
                 </div>
-                <div class="testimonial-item text-center">
-                    <div class="testimonial-text bg-light text-center p-4 mb-4">
-                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et
-                            eos. Clita erat ipsum et lorem et sit.</p>
+                <div class="owl-carousel testimonial-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="testimonial-item text-center">
+                        <div class="testimonial-text bg-light text-center p-4 mb-4">
+                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam
+                                et
+                                eos. Clita erat ipsum et lorem et sit.</p>
+                        </div>
+                        <img class="bg-light rounded-circle p-2 mx-auto mb-2" src="img/testimonial-1.jpg"
+                            style="width: 80px; height: 80px;">
+                        <div class="mb-2">
+                            <small class="fa fa-star text-secondary"></small>
+                            <small class="fa fa-star text-secondary"></small>
+                            <small class="fa fa-star text-secondary"></small>
+                            <small class="fa fa-star text-secondary"></small>
+                            <small class="fa fa-star text-secondary"></small>
+                        </div>
+                        <h5 class="mb-1">Client Name</h5>
+                        <p class="m-0">Profession</p>
                     </div>
-                    <img class="bg-light rounded-circle p-2 mx-auto mb-2" src="img/testimonial-2.jpg"
-                        style="width: 80px; height: 80px;">
-                    <div class="mb-2">
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
+                    <div class="testimonial-item text-center">
+                        <div class="testimonial-text bg-light text-center p-4 mb-4">
+                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam
+                                et
+                                eos. Clita erat ipsum et lorem et sit.</p>
+                        </div>
+                        <img class="bg-light rounded-circle p-2 mx-auto mb-2" src="img/testimonial-2.jpg"
+                            style="width: 80px; height: 80px;">
+                        <div class="mb-2">
+                            <small class="fa fa-star text-secondary"></small>
+                            <small class="fa fa-star text-secondary"></small>
+                            <small class="fa fa-star text-secondary"></small>
+                            <small class="fa fa-star text-secondary"></small>
+                            <small class="fa fa-star text-secondary"></small>
+                        </div>
+                        <h5 class="mb-1">Client Name</h5>
+                        <p class="m-0">Profession</p>
                     </div>
-                    <h5 class="mb-1">Client Name</h5>
-                    <p class="m-0">Profession</p>
-                </div>
-                <div class="testimonial-item text-center">
-                    <div class="testimonial-text bg-light text-center p-4 mb-4">
-                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et
-                            eos. Clita erat ipsum et lorem et sit.</p>
+                    <div class="testimonial-item text-center">
+                        <div class="testimonial-text bg-light text-center p-4 mb-4">
+                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam
+                                et
+                                eos. Clita erat ipsum et lorem et sit.</p>
+                        </div>
+                        <img class="bg-light rounded-circle p-2 mx-auto mb-2" src="img/testimonial-3.jpg"
+                            style="width: 80px; height: 80px;">
+                        <div class="mb-2">
+                            <small class="fa fa-star text-secondary"></small>
+                            <small class="fa fa-star text-secondary"></small>
+                            <small class="fa fa-star text-secondary"></small>
+                            <small class="fa fa-star text-secondary"></small>
+                            <small class="fa fa-star text-secondary"></small>
+                        </div>
+                        <h5 class="mb-1">Client Name</h5>
+                        <p class="m-0">Profession</p>
                     </div>
-                    <img class="bg-light rounded-circle p-2 mx-auto mb-2" src="img/testimonial-3.jpg"
-                        style="width: 80px; height: 80px;">
-                    <div class="mb-2">
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                    </div>
-                    <h5 class="mb-1">Client Name</h5>
-                    <p class="m-0">Profession</p>
-                </div>
-                <div class="testimonial-item text-center">
-                    <div class="testimonial-text bg-light text-center p-4 mb-4">
-                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et
-                            eos. Clita erat ipsum et lorem et sit.</p>
-                    </div>
-                    <img class="bg-light rounded-circle p-2 mx-auto mb-2" src="img/testimonial-4.jpg"
-                        style="width: 80px; height: 80px;">
-                    <div class="mb-2">
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                        <small class="fa fa-star text-secondary"></small>
-                    </div>
-                    <h5 class="mb-1">Client Name</h5>
-                    <p class="m-0">Profession</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5 justify-content-between">
-                <div class="col-lg-3 col-md-6">
-                    <h4 id="contact" class="text-light mb-4">Adresse</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Île-de-France, France</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>07 81 11 71 53</p>
-                    <p class="mb-2 d-flex align-items-center"><i
-                            class="fa fa-envelope me-2"></i><span>contactcobaltservices@gmail.com</span></p>
-                </div>
-
-
-
-                <div class="col-lg-3 col-md-6 mx-lg-3">
-                    <h4 class="text-light mb-4">Horaire d'ouverture</h4>
-                    <h6 class="text-light">Lundi - Vendredi:</h6>
-                    <p class="mb-4">09.00 - 19.00 </p>
-                    <h6 class="text-light">Samedi :</h6>
-                    <p class="mb-4">09.00 - 12.00 </p>
-                    <h6 class="text-light">Dimanche:</h6>
-                    <p class="mb-4">Fermé </p>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Services</h4>
-                    <a class="btn btn-link" href="">Nettoyage</a>
-                    <a class="btn btn-link" href="">Désinfection</a>
-                    <a class="btn btn-link" href="">Débarras</a>
-                    <a class="btn btn-link" href="">Déménagement</a>
-                    <a class="btn btn-link" href="">Nettoyage après chantier</a>
-                    <a class="btn btn-link" href=""> Nettoyage bungalow</a>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Cobalt Services</a>, Tous droits réservés.
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <!-- Footer credit -->
+                    <div class="testimonial-item text-center">
+                        <div class="testimonial-text bg-light text-center p-4 mb-4">
+                            <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam
+                                et
+                                eos. Clita erat ipsum et lorem et sit.</p>
+                        </div>
+                        <img class="bg-light rounded-circle p-2 mx-auto mb-2" src="img/testimonial-4.jpg"
+                            style="width: 80px; height: 80px;">
+                        <div class="mb-2">
+                            <small class="fa fa-star text-secondary"></small>
+                            <small class="fa fa-star text-secondary"></small>
+                            <small class="fa fa-star text-secondary"></small>
+                            <small class="fa fa-star text-secondary"></small>
+                            <small class="fa fa-star text-secondary"></small>
+                        </div>
+                        <h5 class="mb-1">Client Name</h5>
+                        <p class="m-0">Profession</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Footer End -->
+        <!-- Testimonial End -->
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5 justify-content-between">
+                    <div class="col-lg-3 col-md-6">
+                        <h4 id="contact" class="text-light mb-4">Adresse</h4>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Île-de-France, France</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>07 81 11 71 53</p>
+                        <p class="mb-2 d-flex align-items-center"><i
+                                class="fa fa-envelope me-2"></i><span>contactcobaltservices@gmail.com</span></p>
+                    </div>
+
+
+
+                    <div class="col-lg-3 col-md-6 mx-lg-3">
+                        <h4 class="text-light mb-4">Horaire d'ouverture</h4>
+                        <h6 class="text-light">Lundi - Vendredi:</h6>
+                        <p class="mb-4">09.00 - 19.00 </p>
+                        <h6 class="text-light">Samedi :</h6>
+                        <p class="mb-4">09.00 - 12.00 </p>
+                        <h6 class="text-light">Dimanche:</h6>
+                        <p class="mb-4">Fermé </p>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="text-light mb-4">Services</h4>
+                        <a class="btn btn-link" href="">Nettoyage</a>
+                        <a class="btn btn-link" href="">Désinfection</a>
+                        <a class="btn btn-link" href="">Débarras</a>
+                        <a class="btn btn-link" href="">Déménagement</a>
+                        <a class="btn btn-link" href="">Nettoyage après chantier</a>
+                        <a class="btn btn-link" href=""> Nettoyage bungalow</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Cobalt Services</a>, Tous droits réservés.
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <!-- Footer credit -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
 
 
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top">
-        <i class="bi bi-arrow-up"></i>
-    </a>
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top">
+            <i class="bi bi-arrow-up"></i>
+        </a>
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/tempusdominus/js/moment.min.js"></script>
+        <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+        <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 </body>
 
 </html>
